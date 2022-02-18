@@ -1,17 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-// import { grpahCMSImageLoader } from '../util';
-
 const Author = ({ author }) => (
   <div className="relative p-12 mt-20 mb-8 text-center bg-black rounded-lg bg-opacity-20">
     <div className="absolute left-0 right-0 -top-14">
       <Image
         unoptimized
-        // loader={grpahCMSImageLoader}
         alt={author.name}
-        height="100px"
-        width="100px"
+        height={100}
+        width={100}
+        objectFit="cover"
         className="align-middle rounded-full"
         src={author.photo.url}
       />

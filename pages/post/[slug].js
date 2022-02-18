@@ -5,10 +5,16 @@ import {
   Author,
   Comments,
   CommentsForm,
+  Loader,
 } from "../../components";
 import { getPosts, getPostDetails } from "../../services";
+import { useRouter } from "next/router";
 
 const PostDetails = ({ post }) => {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <Loader />;
+  }
   return (
     <>
       <div className="container px-10 mx-auto mb-8">
@@ -53,6 +59,6 @@ export async function getStaticPaths() {
   const paths = posts.map(({ node: { slug } }) => ({ params: { slug } }));
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
