@@ -1,3 +1,3 @@
 # blog_app
-Creative Nepal blog...
+GraphCMS
 https://app.graphcms.com/
