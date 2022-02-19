@@ -71,7 +71,7 @@ const CommentsForm = ({ slug }) => {
         />
       </div>
       <div className="grid grid-cols-1 gap-4 mb-4">
-        <div className="container">
+        <div className="container space-x-5">
           <input
             type="checkbox"
             ref={storeDataEl}
@@ -94,8 +94,8 @@ const CommentsForm = ({ slug }) => {
           Post Comment
         </button>
         {showSuccessMessage && (
-          <span className="float-right mt-3 text-xl font-semibold text-green-500">
-            Comment submitted for review
+          <span className="float-right mt-3 text-xl font-semibold text-green-500 animate-bounce">
+            Thank You for commenting !!
           </span>
         )}
       </div>
